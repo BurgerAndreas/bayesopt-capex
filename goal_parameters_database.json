@@ -1,0 +1,362 @@
+{
+    "Testing_T_test_80C_T_dep_46C_dep_I_mA_cm2_95_dep_t_s_155_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_11-00": {
+        "Stability slope [mV/scan]": -0.061774102971328806,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -262.0,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_47C_dep_I_mA_cm2_44_dep_t_s_40_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_26.11.2024_12-51": {
+        "Stability slope [mV/scan]": -0.29373490167846034,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -313.7,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_50C_dep_I_mA_cm2_75_dep_t_s_111_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_03-49": {
+        "Stability slope [mV/scan]": -0.04305301904027667,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -279.3,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_53C_dep_I_mA_cm2_71_dep_t_s_86_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_18-22": {
+        "Stability slope [mV/scan]": -0.07559595587364257,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -280.8,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_57C_dep_I_mA_cm2_9_dep_t_s_312_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_25.11.2024_23-49": {
+        "Stability slope [mV/scan]": -0.08238371729893866,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -421.8,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_58C_dep_I_mA_cm2_74_dep_t_s_146_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_01-29": {
+        "Stability slope [mV/scan]": -0.09376963968974777,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -254.9,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_59C_dep_I_mA_cm2_75_dep_t_s_221_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_11-10": {
+        "Stability slope [mV/scan]": -0.06656385397708042,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -257.0,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_68C_dep_I_mA_cm2_39_dep_t_s_174_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_13-40": {
+        "Stability slope [mV/scan]": -0.054630531471323775,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -255.4,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_76C_dep_I_mA_cm2_64_dep_t_s_181_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_25.11.2024_21-23": {
+        "Stability slope [mV/scan]": -0.15406576235073036,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -265.8,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_30C_dep_I_mA_cm2_90_dep_t_s_55_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_26.11.2024_02-15": {
+        "Stability slope [mV/scan]": -0.14090078958635235,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -447.8,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_31C_dep_I_mA_cm2_4_dep_t_s_242_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_20-39": {
+        "Stability slope [mV/scan]": -0.20645195335078304,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -441.9,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_37C_dep_I_mA_cm2_70_dep_t_s_203_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_23-07": {
+        "Stability slope [mV/scan]": -0.22755422778184045,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -307.4,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_42C_dep_I_mA_cm2_33_dep_t_s_214_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_06-08": {
+        "Stability slope [mV/scan]": -0.000547400114945565,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -288.4,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_42C_dep_I_mA_cm2_39_dep_t_s_152_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_26.11.2024_10-30": {
+        "Stability slope [mV/scan]": -0.08106995702307566,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -277.3,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_42C_dep_I_mA_cm2_61_dep_t_s_253_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_16-00": {
+        "Stability slope [mV/scan]": -0.05359047125292597,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -271.6,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_46.0C_dep_I_mA_cm2_47.9_dep_t_s_204.8_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_02.12.2024_15-03": {
+        "Stability slope [mV/scan]": -0.0402932395575428,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -345.5,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_57.1C_dep_I_mA_cm2_86.9_dep_t_s_161.0_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_2_KOH_conc_30_start_t_02.12.2024_17-27": {
+        "Stability slope [mV/scan]": 0.02965813822762016,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -353.0,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_48.6C_dep_I_mA_cm2_82.8_dep_t_s_102.6_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_3_KOH_conc_30_start_t_02.12.2024_19-48": {
+        "Stability slope [mV/scan]": 0.00244740825584589,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -350.0,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_51.5C_dep_I_mA_cm2_74.3_dep_t_s_153.6_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_4_KOH_conc_30_start_t_02.12.2024_22-06": {
+        "Stability slope [mV/scan]": 0.03286201812617669,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -355.1,
+        "IR correction": 0
+    },
+    "esting_T_test_80C_T_dep_41.0C_dep_I_mA_cm2_52.5_dep_t_s_198.6_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_5_KOH_conc_30_start_t_03.12.2024_00-25": {
+        "Stability slope [mV/scan]": 0.35531918041637467,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -359.8,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_63.1C_dep_I_mA_cm2_52.3_dep_t_s_166.8_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_6_KOH_conc_30_start_t_03.12.2024_02-50": {
+        "Stability slope [mV/scan]": -0.0538429816285254,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -348.4,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_47.2C_dep_I_mA_cm2_38.2_dep_t_s_226.1_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_7_KOH_conc_30_start_t_03.12.2024_05-13": {
+        "Stability slope [mV/scan]": -0.0341302205860113,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -370,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_56.5C_dep_I_mA_cm2_88.1_dep_t_s_125.9_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_8_KOH_conc_30_start_t_03.12.2024_07-36": {
+        "Stability slope [mV/scan]": -0.0531087591517744,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -343.3,
+        "IR correction": 0
+    },
+    "Testing_T_test_80C_T_dep_53.6C_dep_I_mA_cm2_63.2_dep_t_s_235.1_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_9_KOH_conc_30_start_t_03.12.2024_09-59": {
+        "Stability slope [mV/scan]": -0.0568688681993839,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -351.9,
+        "IR correction": 0
+    },
+    "T_test_80C_T_dep_42.3C_dep_density_mA_cm2_29.7_dep_time_s_187.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 16:24": {
+        "Stability slope [mV/scan]": -0.020602727680995636,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -369.03259165317724,
+        "IR correction": 0.38005144094494536
+    },
+    "T_test_80C_T_dep_56.2C_dep_density_mA_cm2_81.6_dep_time_s_108.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 18:46": {
+        "Stability slope [mV/scan]": 0.012303788777103251,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -323.7318780688008,
+        "IR correction": 0.2759324315597254
+    },
+    "T_test_80C_T_dep_76.0C_dep_density_mA_cm2_41.1_dep_time_s_168.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 21:05": {
+        "Stability slope [mV/scan]": -0.0634323721582355,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -326.46832500939576,
+        "IR correction": 0.323571543913111
+    },
+    "T_test_80C_T_dep_42.9C_dep_density_mA_cm2_23.0_dep_time_s_239.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 23:27": {
+        "Stability slope [mV/scan]": -0.024184843400909012,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -365.8560548718362,
+        "IR correction": 0.41990368336124434
+    },
+    "T_test_80C_T_dep_48.0C_dep_density_mA_cm2_89.8_dep_time_s_131.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 02:07": {
+        "Stability slope [mV/scan]": -0.05582315739916152,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -320.2129879494695,
+        "IR correction": 0.2840876794267025
+    },
+    "T_test_80C_T_dep_41.5C_dep_density_mA_cm2_53.0_dep_time_s_273.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 04:28": {
+        "Stability slope [mV/scan]": -0.041272202859882264,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -340.1942211420256,
+        "IR correction": 0.3286362121951702
+    },
+    "T_test_80C_T_dep_73.5C_dep_density_mA_cm2_40.0_dep_time_s_207.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 06:54": {
+        "Stability slope [mV/scan]": -0.012214792113241025,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -441.53782010686876,
+        "IR correction": 0.33182554972350253
+    },
+    "T_test_80C_T_dep_44.3C_dep_density_mA_cm2_53.6_dep_time_s_224.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 16:39": {
+        "Stability slope [mV/scan]": -0.04327462779647909,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -314.0898628975171,
+        "IR correction": 0.29131878752462065
+    },
+    "T_test_80C_T_dep_55.9C_dep_density_mA_cm2_95.2_dep_time_s_100.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 18:59": {
+        "Stability slope [mV/scan]": -0.13727735398678506,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -338.95156781817883,
+        "IR correction": 0.31305449631016385
+    },
+    "T_test_80C_T_dep_52.6C_dep_density_mA_cm2_96.3_dep_time_s_97.3_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 21:19": {
+        "Stability slope [mV/scan]": -0.03537617387990066,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -373.79222869697804,
+        "IR correction": 0.3016377351402631
+    },
+    "T_test_80C_T_dep_40.4C_dep_density_mA_cm2_41.3_dep_time_s_229.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 23:38": {
+        "Stability slope [mV/scan]": -0.020691724344844346,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -341.55715473535577,
+        "IR correction": 0.31111597321553885
+    },
+    "T_test_80C_T_dep_54.9C_dep_density_mA_cm2_83.8_dep_time_s_137.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 02:00": {
+        "Stability slope [mV/scan]": -0.023472870090120584,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -310.8540569787914,
+        "IR correction": 0.30436658956485413
+    },
+    "T_test_80C_T_dep_43.0C_dep_density_mA_cm2_79.6_dep_time_s_129.2_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 04:20": {
+        "Stability slope [mV/scan]": -0.061541193051449394,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -339.86146332823,
+        "IR correction": 0.28588577396821124
+    },
+    "T_test_80C_T_dep_50.8C_dep_density_mA_cm2_78.6_dep_time_s_128.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 06:38": {
+        "Stability slope [mV/scan]": -0.003626614051833119,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -323.6648414045473,
+        "IR correction": 0.2840922698914493
+    },
+    "T_test_80C_T_dep_47.4C_dep_density_mA_cm2_62.1_dep_time_s_271.2_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_8_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 08:59": {
+        "Stability slope [mV/scan]": -0.03955901708079173,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -317.36986314845603,
+        "IR correction": 0.28561919412118564
+    },
+    "T_test_80C_T_dep_43.8C_dep_density_mA_cm2_90.1_dep_time_s_85.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_9_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 11:25": {
+        "Stability slope [mV/scan]": -0.061229704727978,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -330.7842593845165,
+        "IR correction": 0.31097701323701177
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_10.1_dep_time_s_173.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 00:01": {
+        "Stability slope [mV/scan]": -0.06561279042252666,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -409.1117926456478,
+        "IR correction": 0.30443979326685516
+    },
+    "T_test_80C_T_dep_39.6C_dep_density_mA_cm2_4_dep_time_s_312_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 13:26": {
+        "Stability slope [mV/scan]": -0.02634301249923939,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -443.4464431676573,
+        "IR correction": 0.3340869307789979
+    },
+    "T_test_80C_T_dep_55.9C_dep_density_mA_cm2_51.5_dep_time_s_95.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 08:03": {
+        "Stability slope [mV/scan]": -0.28481157348214453,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -355.88680145110226,
+        "IR correction": 0.2776795537078947
+    },
+    "T_test_80C_T_dep_79C_dep_density_mA_cm2_62.6_dep_time_s_96.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 15:57": {
+        "Stability slope [mV/scan]": -0.07825031668906518,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -402.1929269920142,
+        "IR correction": 0.358697934140149
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_66.2_dep_time_s_162.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 18:16": {
+        "Stability slope [mV/scan]": -0.2088974192191108,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -372.67536983461497,
+        "IR correction": 0.2779794487615611
+    },
+    "T_test_80C_T_dep_79C_dep_density_mA_cm2_70.99_dep_time_s_129_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 11:59": {
+        "Stability slope [mV/scan]": -0.061363199723750136,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -341.9547274243128,
+        "IR correction": 0.2914396162407097
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_76.2_dep_time_s_40_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 05:46": {
+        "Stability slope [mV/scan]": -0.2921315490837134,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -365.7169634687382,
+        "IR correction": 0.3171327841715143
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_78.8_dep_time_s_312_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 03:20": {
+        "Stability slope [mV/scan]": -0.03898053876577299,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -313.6903445069735,
+        "IR correction": 0.29789260295237807
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_9.7_dep_time_s_156.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 10:22": {
+        "Stability slope [mV/scan]": -0.18715998407403664,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -413.4054209191179,
+        "IR correction": 0.33914031595391453
+    },
+    "T_test_80C_T_dep_46C_dep_density_mA_cm2_95_dep_time_s_155_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 15:53": {
+        "Stability slope [mV/scan]": -0.04367511278380042,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -330.6031143926658,
+        "IR correction": 0.31070870592749217
+    },
+    "T_test_80C_T_dep_79C_dep_density_mA_cm2_96.3_dep_time_s_201.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 21:32": {
+        "Stability slope [mV/scan]": -0.019267777723262575,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -358.1345336455112,
+        "IR correction": 0.32256570960924597
+    },
+    "T_test_80C_T_dep_53.7C_dep_density_mA_cm2_100.0_dep_time_s_167.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_08.12.2024 at 14:20": {
+        "Stability slope [mV/scan]": -0.07159781606636496,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -313.0040234730411,
+        "IR correction": 0.27413789389910964
+    },
+    "T_test_80C_T_dep_51.3C_dep_density_mA_cm2_91.7_dep_time_s_145.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_08.12.2024 at 17:18": {
+        "Stability slope [mV/scan]": -0.047924703482579406,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -312.67715682975427,
+        "IR correction": 0.2971198629729786
+    },
+    "T_test_80C_T_dep_69.3C_dep_density_mA_cm2_35.9_dep_time_s_160.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 11:48": {
+        "Stability slope [mV/scan]": -0.28765946672531423,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -383.5073521837753,
+        "IR correction": 0.31293619279661533
+    },
+    "T_test_80C_T_dep_70.4C_dep_density_mA_cm2_45.0_dep_time_s_191.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 14:15": {
+        "Stability slope [mV/scan]": -0.07713785839095295,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -363.60029264156645,
+        "IR correction": 0.26729862059643816
+    },
+    "T_test_80C_T_dep_45.1C_dep_density_mA_cm2_65.6_dep_time_s_260.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 17:40": {
+        "Stability slope [mV/scan]": -0.07144207190462773,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -318.90241846186206,
+        "IR correction": 0.27812642473010085
+    },
+    "T_test_80C_T_dep_68.8C_dep_density_mA_cm2_37.8_dep_time_s_189.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 20:04": {
+        "Stability slope [mV/scan]": -0.164910818111839,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -394.42554626835397,
+        "IR correction": 0.2730760295194423
+    },
+    "T_test_80C_T_dep_56.8C_dep_density_mA_cm2_75.9_dep_time_s_132.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 22:26": {
+        "Stability slope [mV/scan]": -0.07064110192998814,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -341.469834807957,
+        "IR correction": 0.29772325903488167
+    },
+    "T_test_80C_T_dep_75.1C_dep_density_mA_cm2_42.5_dep_time_s_173.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 00:46": {
+        "Stability slope [mV/scan]": -0.03691136633128824,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -339.4044912375583,
+        "IR correction": 0.285763336534608
+    },
+    "T_test_80C_T_dep_51.8C_dep_density_mA_cm2_82.7_dep_time_s_109.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 03:09": {
+        "Stability slope [mV/scan]": -0.022961139272990982,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -336.00896942596444,
+        "IR correction": 0.28626792981269883
+    },
+    "T_test_80C_T_dep_70.3C_dep_density_mA_cm2_39.8_dep_time_s_180.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 05:28": {
+        "Stability slope [mV/scan]": -0.050794845891703126,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -343.7638588943834,
+        "IR correction": 0.27979672648075804
+    },
+    "T_test_80C_T_dep_61.7C_dep_density_mA_cm2_78.2_dep_time_s_205.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 07:49": {
+        "Stability slope [mV/scan]": -0.046901241848319584,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -314.06664848449753,
+        "IR correction": 0.2636438760876726
+    },
+    "T_test_80C_T_dep_70.2C_dep_density_mA_cm2_47.7_dep_time_s_167.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 11:33": {
+        "Stability slope [mV/scan]": -0.05822606732308091,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -345.8218531676281,
+        "IR correction": 0.2746334882188574
+    },
+    "T_test_80C_T_dep_50.1C_dep_density_mA_cm2_93.4_dep_time_s_170.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 13:54": {
+        "Stability slope [mV/scan]": -0.05528917741606928,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -311.75441792533826,
+        "IR correction": 0.27112275607300224
+    },
+    "T_test_80C_T_dep_45.8C_dep_density_mA_cm2_30.5_dep_time_s_209.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 16:13": {
+        "Stability slope [mV/scan]": -0.00398260070723102,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -357.0719590569345,
+        "IR correction": 0.2949021506668071
+    },
+    "T_test_80C_T_dep_50.0C_dep_density_mA_cm2_93.6_dep_time_s_155.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 18:37": {
+        "Stability slope [mV/scan]": -0.05731385151862998,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -306.8765482115374,
+        "IR correction": 0.2940767027296308
+    },
+    "T_test_80C_T_dep_63.2C_dep_density_mA_cm2_75.2_dep_time_s_234.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 20:56": {
+        "Stability slope [mV/scan]": -0.04836968680182417,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -321.35669241463023,
+        "IR correction": 0.2798565585272052
+    },
+    "T_test_80C_T_dep_46.2C_dep_density_mA_cm2_55.2_dep_time_s_261.2_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 23:23": {
+        "Stability slope [mV/scan]": -0.053553742471016116,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -321.4238442155815,
+        "IR correction": 0.3024026296351742
+    },
+    "T_test_80C_T_dep_58.3C_dep_density_mA_cm2_77.1_dep_time_s_225.3_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 01:54": {
+        "Stability slope [mV/scan]": -0.06129645222586653,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -309.63054070458634,
+        "IR correction": 0.26582481824579185
+    },
+    "T_test_80C_T_dep_40.4C_dep_density_mA_cm2_32.2_dep_time_s_222.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_8_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 04:16": {
+        "Stability slope [mV/scan]": -0.046278265201378635,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -345.16534254634223,
+        "IR correction": 0.3058234804019107
+    },
+    "T_test_80C_T_dep_42.6C_dep_density_mA_cm2_32.9_dep_time_s_199.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_9_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 06:52": {
+        "Stability slope [mV/scan]": -0.048080447644314184,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -342.4102718248406,
+        "IR correction": 0.3150276092235452
+    },
+    "T_test_80C_T_dep_61.6C_dep_density_mA_cm2_67.6_dep_time_s_213.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_10_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 09:12": {
+        "Stability slope [mV/scan]": -0.05497768909259481,
+        "Overpotential LSV @ 100 mA_cm2 [mV]": -321.38258507605815,
+        "IR correction": 0.27369410657919113
+    }
+}

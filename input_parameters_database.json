@@ -1,0 +1,578 @@
+{
+    "Testing_T_test_80C_T_dep_46C_dep_I_mA_cm2_95_dep_t_s_155_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_11-00": {
+        "Deposition current density [mA/cm2]": 95.0,
+        "Deposition time [s]": 155.0,
+        "Temperature_deposition [C] realized": 48.23,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.308
+        }
+    },
+    "Testing_T_test_80C_T_dep_47C_dep_I_mA_cm2_44_dep_t_s_40_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_26.11.2024_12-51": {
+        "Deposition current density [mA/cm2]": 44.0,
+        "Deposition time [s]": 40.0,
+        "Temperature_deposition [C] realized": 47.5,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.168
+        }
+    },
+    "Testing_T_test_80C_T_dep_50C_dep_I_mA_cm2_75_dep_t_s_111_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_03-49": {
+        "Deposition current density [mA/cm2]": 75.0,
+        "Deposition time [s]": 111.0,
+        "Temperature_deposition [C] realized": 52.29,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.396
+        }
+    },
+    "Testing_T_test_80C_T_dep_53C_dep_I_mA_cm2_71_dep_t_s_86_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_18-22": {
+        "Deposition current density [mA/cm2]": 71.0,
+        "Deposition time [s]": 86.0,
+        "Temperature_deposition [C] realized": 54.27,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.168
+        }
+    },
+    "Testing_T_test_80C_T_dep_57C_dep_I_mA_cm2_9_dep_t_s_312_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_25.11.2024_23-49": {
+        "Deposition current density [mA/cm2]": 9.0,
+        "Deposition time [s]": 312.0,
+        "Temperature_deposition [C] realized": 59.0,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.376
+        }
+    },
+    "Testing_T_test_80C_T_dep_58C_dep_I_mA_cm2_74_dep_t_s_146_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_01-29": {
+        "Deposition current density [mA/cm2]": 74.0,
+        "Deposition time [s]": 146.0,
+        "Temperature_deposition [C] realized": 60.07,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.06
+        }
+    },
+    "Testing_T_test_80C_T_dep_59C_dep_I_mA_cm2_75_dep_t_s_221_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_11-10": {
+        "Deposition current density [mA/cm2]": 75.0,
+        "Deposition time [s]": 221.0,
+        "Temperature_deposition [C] realized": 61.3,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.332
+        }
+    },
+    "Testing_T_test_80C_T_dep_68C_dep_I_mA_cm2_39_dep_t_s_174_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_13-40": {
+        "Deposition current density [mA/cm2]": 39.0,
+        "Deposition time [s]": 174.0,
+        "Temperature_deposition [C] realized": 70.86,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.04
+        }
+    },
+    "Testing_T_test_80C_T_dep_76C_dep_I_mA_cm2_64_dep_t_s_181_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_25.11.2024_21-23": {
+        "Deposition current density [mA/cm2]": 64.0,
+        "Deposition time [s]": 181.0,
+        "Temperature_deposition [C] realized": 79.0,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.036
+        }
+    },
+    "Testing_T_test_80C_T_dep_30C_dep_I_mA_cm2_90_dep_t_s_55_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_26.11.2024_02-15": {
+        "Deposition current density [mA/cm2]": 90.0,
+        "Deposition time [s]": 55.0,
+        "Temperature_deposition [C] realized": 28.4,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.156
+        }
+    },
+    "Testing_T_test_80C_T_dep_31C_dep_I_mA_cm2_4_dep_t_s_242_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_20-39": {
+        "Deposition current density [mA/cm2]": 4.0,
+        "Deposition time [s]": 242.0,
+        "Temperature_deposition [C] realized": 38.49,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.236
+        }
+    },
+    "Testing_T_test_80C_T_dep_37C_dep_I_mA_cm2_70_dep_t_s_203_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_23-07": {
+        "Deposition current density [mA/cm2]": 70.0,
+        "Deposition time [s]": 203.0,
+        "Temperature_deposition [C] realized": 38.47,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.096
+        }
+    },
+    "Testing_T_test_80C_T_dep_42C_dep_I_mA_cm2_33_dep_t_s_214_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_28.11.2024_06-08": {
+        "Deposition current density [mA/cm2]": 33.0,
+        "Deposition time [s]": 214.0,
+        "Temperature_deposition [C] realized": 43.58,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.38
+        }
+    },
+    "Testing_T_test_80C_T_dep_42C_dep_I_mA_cm2_39_dep_t_s_152_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_26.11.2024_10-30": {
+        "Deposition current density [mA/cm2]": 39.0,
+        "Deposition time [s]": 152.0,
+        "Temperature_deposition [C] realized": 43.0,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.24
+        }
+    },
+    "Testing_T_test_80C_T_dep_42C_dep_I_mA_cm2_61_dep_t_s_253_roll_while_dep_True_HCl_dip_t_s_900_HCl_conc_3_Retain_elyte_False_protocol_testing_protocol_coated_wires_1_exp_cyc_1_KOH_conc_30_start_t_27.11.2024_16-00": {
+        "Deposition current density [mA/cm2]": 61.0,
+        "Deposition time [s]": 253.0,
+        "Temperature_deposition [C] realized": 45.5,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.368
+        }
+    },
+    "T_test_80C_T_dep_46.0C_dep_density_mA_cm2_47.9_dep_time_s_204.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_02.12.2024 at 15:03": {
+        "Deposition current density [mA/cm2]": 47.9,
+        "Deposition time [s]": 204.8,
+        "Temperature_deposition [C] realized": 45.46,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3381
+        }
+    },
+    "T_test_80C_T_dep_57.1C_dep_density_mA_cm2_86.9_dep_time_s_161.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_02.12.2024 at 17:27": {
+        "Deposition current density [mA/cm2]": 86.9,
+        "Deposition time [s]": 161.0,
+        "Temperature_deposition [C] realized": 57.56,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3576
+        }
+    },
+    "T_test_80C_T_dep_48.6C_dep_density_mA_cm2_82.8_dep_time_s_102.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_02.12.2024 at 19:48": {
+        "Deposition current density [mA/cm2]": 82.8,
+        "Deposition time [s]": 102.6,
+        "Temperature_deposition [C] realized": 49.44,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3098
+        }
+    },
+    "T_test_80C_T_dep_51.5C_dep_density_mA_cm2_74.3_dep_time_s_153.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_02.12.2024 at 22:06": {
+        "Deposition current density [mA/cm2]": 74.3,
+        "Deposition time [s]": 153.6,
+        "Temperature_deposition [C] realized": 51.72,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3204
+        }
+    },
+    "T_test_80C_T_dep_41.0C_dep_density_mA_cm2_52.5_dep_time_s_198.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 00:25": {
+        "Deposition current density [mA/cm2]": 52.5,
+        "Deposition time [s]": 198.6,
+        "Temperature_deposition [C] realized": 42.57,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.4
+        }
+    },
+    "T_test_80C_T_dep_63.1C_dep_density_mA_cm2_52.3_dep_time_s_166.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 02:50": {
+        "Deposition current density [mA/cm2]": 52.3,
+        "Deposition time [s]": 166.8,
+        "Temperature_deposition [C] realized": 64.4,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0814
+        }
+    },
+    "T_test_80C_T_dep_47.2C_dep_density_mA_cm2_38.2_dep_time_s_226.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 05:13": {
+        "Deposition current density [mA/cm2]": 38.2,
+        "Deposition time [s]": 226.1,
+        "Temperature_deposition [C] realized": 49.02,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3101
+        }
+    },
+    "T_test_80C_T_dep_56.5C_dep_density_mA_cm2_88.1_dep_time_s_125.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_8_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 07:36": {
+        "Deposition current density [mA/cm2]": 88.1,
+        "Deposition time [s]": 125.9,
+        "Temperature_deposition [C] realized": 56.84,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.2892
+        }
+    },
+    "T_test_80C_T_dep_53.6C_dep_density_mA_cm2_63.2_dep_time_s_235.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_9_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 09:59": {
+        "Deposition current density [mA/cm2]": 63.2,
+        "Deposition time [s]": 235.1,
+        "Temperature_deposition [C] realized": 53.1,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.338
+        }
+    },
+    "T_test_80C_T_dep_42.3C_dep_density_mA_cm2_29.7_dep_time_s_187.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 16:24": {
+        "Deposition current density [mA/cm2]": 29.7,
+        "Deposition time [s]": 187.6,
+        "Temperature_deposition [C] realized": 42.06,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3275
+        }
+    },
+    "T_test_80C_T_dep_56.2C_dep_density_mA_cm2_81.6_dep_time_s_108.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 18:46": {
+        "Deposition current density [mA/cm2]": 81.6,
+        "Deposition time [s]": 108.9,
+        "Temperature_deposition [C] realized": 56.44,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0986
+        }
+    },
+    "T_test_80C_T_dep_76.0C_dep_density_mA_cm2_41.1_dep_time_s_168.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 21:05": {
+        "Deposition current density [mA/cm2]": 41.1,
+        "Deposition time [s]": 168.4,
+        "Temperature_deposition [C] realized": 75.54,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0981
+        }
+    },
+    "T_test_80C_T_dep_42.9C_dep_density_mA_cm2_23.0_dep_time_s_239.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_03.12.2024 at 23:27": {
+        "Deposition current density [mA/cm2]": 23.0,
+        "Deposition time [s]": 239.5,
+        "Temperature_deposition [C] realized": 44.58,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.4
+        }
+    },
+    "T_test_80C_T_dep_48.0C_dep_density_mA_cm2_89.8_dep_time_s_131.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 02:07": {
+        "Deposition current density [mA/cm2]": 89.8,
+        "Deposition time [s]": 131.7,
+        "Temperature_deposition [C] realized": 48.6,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3833
+        }
+    },
+    "T_test_80C_T_dep_41.5C_dep_density_mA_cm2_53.0_dep_time_s_273.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 04:28": {
+        "Deposition current density [mA/cm2]": 53.0,
+        "Deposition time [s]": 273.0,
+        "Temperature_deposition [C] realized": 42.11,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3265
+        }
+    },
+    "T_test_80C_T_dep_73.5C_dep_density_mA_cm2_40.0_dep_time_s_207.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 06:54": {
+        "Deposition current density [mA/cm2]": 40.0,
+        "Deposition time [s]": 207.6,
+        "Temperature_deposition [C] realized": 75.03,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0
+        }
+    },
+    "T_test_80C_T_dep_44.3C_dep_density_mA_cm2_53.6_dep_time_s_224.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 16:39": {
+        "Deposition current density [mA/cm2]": 53.6,
+        "Deposition time [s]": 224.1,
+        "Temperature_deposition [C] realized": 44.88,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.2743
+        }
+    },
+    "T_test_80C_T_dep_55.9C_dep_density_mA_cm2_95.2_dep_time_s_100.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 18:59": {
+        "Deposition current density [mA/cm2]": 95.2,
+        "Deposition time [s]": 100.9,
+        "Temperature_deposition [C] realized": 56.33,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0722
+        }
+    },
+    "T_test_80C_T_dep_52.6C_dep_density_mA_cm2_96.3_dep_time_s_97.3_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 21:19": {
+        "Deposition current density [mA/cm2]": 96.3,
+        "Deposition time [s]": 97.3,
+        "Temperature_deposition [C] realized": 53.08,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3513
+        }
+    },
+    "T_test_80C_T_dep_40.4C_dep_density_mA_cm2_41.3_dep_time_s_229.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_04.12.2024 at 23:38": {
+        "Deposition current density [mA/cm2]": 41.3,
+        "Deposition time [s]": 229.1,
+        "Temperature_deposition [C] realized": 41.97,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3014
+        }
+    },
+    "T_test_80C_T_dep_54.9C_dep_density_mA_cm2_83.8_dep_time_s_137.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 02:00": {
+        "Deposition current density [mA/cm2]": 83.8,
+        "Deposition time [s]": 137.8,
+        "Temperature_deposition [C] realized": 54.78,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.1497
+        }
+    },
+    "T_test_80C_T_dep_43.0C_dep_density_mA_cm2_79.6_dep_time_s_129.2_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 04:20": {
+        "Deposition current density [mA/cm2]": 79.6,
+        "Deposition time [s]": 129.2,
+        "Temperature_deposition [C] realized": 44.39,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3399
+        }
+    },
+    "T_test_80C_T_dep_50.8C_dep_density_mA_cm2_78.6_dep_time_s_128.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 06:38": {
+        "Deposition current density [mA/cm2]": 78.6,
+        "Deposition time [s]": 128.7,
+        "Temperature_deposition [C] realized": 51.11,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0999
+        }
+    },
+    "T_test_80C_T_dep_47.4C_dep_density_mA_cm2_62.1_dep_time_s_271.2_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_8_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 08:59": {
+        "Deposition current density [mA/cm2]": 62.1,
+        "Deposition time [s]": 271.2,
+        "Temperature_deposition [C] realized": 47.69,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.261
+        }
+    },
+    "T_test_80C_T_dep_43.8C_dep_density_mA_cm2_90.1_dep_time_s_85.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_9_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_05.12.2024 at 11:25": {
+        "Deposition current density [mA/cm2]": 90.1,
+        "Deposition time [s]": 85.0,
+        "Temperature_deposition [C] realized": 44.43,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3628
+        }
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_10.1_dep_time_s_173.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 00:01": {
+        "Deposition current density [mA/cm2]": 10.1,
+        "Deposition time [s]": 173.4,
+        "Temperature_deposition [C] realized": 29.97,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.4
+        }
+    },
+    "T_test_80C_T_dep_39.6C_dep_density_mA_cm2_4_dep_time_s_312_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 13:26": {
+        "Deposition current density [mA/cm2]": 4,
+        "Deposition time [s]": 312,
+        "Temperature_deposition [C] realized": 40.44,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0
+        }
+    },
+    "T_test_80C_T_dep_55.9C_dep_density_mA_cm2_51.5_dep_time_s_95.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 08:03": {
+        "Deposition current density [mA/cm2]": 51.5,
+        "Deposition time [s]": 95.9,
+        "Temperature_deposition [C] realized": 55.96,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0555
+        }
+    },
+    "T_test_80C_T_dep_79C_dep_density_mA_cm2_62.6_dep_time_s_96.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 15:57": {
+        "Deposition current density [mA/cm2]": 62.6,
+        "Deposition time [s]": 96.5,
+        "Temperature_deposition [C] realized": 77.36,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.2902
+        }
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_66.2_dep_time_s_162.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 18:16": {
+        "Deposition current density [mA/cm2]": 66.2,
+        "Deposition time [s]": 162.8,
+        "Temperature_deposition [C] realized": 29.98,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.2387
+        }
+    },
+    "T_test_80C_T_dep_79C_dep_density_mA_cm2_70.99_dep_time_s_129_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 11:59": {
+        "Deposition current density [mA/cm2]": 70.99,
+        "Deposition time [s]": 129,
+        "Temperature_deposition [C] realized": 74.41,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.1275
+        }
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_76.2_dep_time_s_40_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 05:46": {
+        "Deposition current density [mA/cm2]": 76.2,
+        "Deposition time [s]": 40,
+        "Temperature_deposition [C] realized": 29.05,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.32
+        }
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_78.8_dep_time_s_312_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 03:20": {
+        "Deposition current density [mA/cm2]": 78.8,
+        "Deposition time [s]": 312,
+        "Temperature_deposition [C] realized": 29.14,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3629
+        }
+    },
+    "T_test_80C_T_dep_28.4C_dep_density_mA_cm2_9.7_dep_time_s_156.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 10:22": {
+        "Deposition current density [mA/cm2]": 9.7,
+        "Deposition time [s]": 156.6,
+        "Temperature_deposition [C] realized": 29.95,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0823
+        }
+    },
+    "T_test_80C_T_dep_46C_dep_density_mA_cm2_95_dep_time_s_155_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_07.12.2024 at 15:53": {
+        "Deposition current density [mA/cm2]": 95,
+        "Deposition time [s]": 155,
+        "Temperature_deposition [C] realized": 46.77,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.308
+        }
+    },
+    "T_test_80C_T_dep_79C_dep_density_mA_cm2_96.3_dep_time_s_201.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_06.12.2024 at 21:32": {
+        "Deposition current density [mA/cm2]": 96.3,
+        "Deposition time [s]": 201.7,
+        "Temperature_deposition [C] realized": 80.23,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.4
+        }
+    },
+    "T_test_80C_T_dep_53.7C_dep_density_mA_cm2_100.0_dep_time_s_167.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_08.12.2024 at 14:20": {
+        "Deposition current density [mA/cm2]": 100.0,
+        "Deposition time [s]": 167.9,
+        "Temperature_deposition [C] realized": 52.99,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.2952
+        }
+    },
+    "T_test_80C_T_dep_51.3C_dep_density_mA_cm2_91.7_dep_time_s_145.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_08.12.2024 at 17:18": {
+        "Deposition current density [mA/cm2]": 91.7,
+        "Deposition time [s]": 145.5,
+        "Temperature_deposition [C] realized": 51.83,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3165
+        }
+    },
+    "T_test_80C_T_dep_69.3C_dep_density_mA_cm2_35.9_dep_time_s_160.7_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 11:48": {
+        "Deposition current density [mA/cm2]": 35.9,
+        "Deposition time [s]": 160.7,
+        "Temperature_deposition [C] realized": 70.4,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0418
+        }
+    },
+    "T_test_80C_T_dep_70.4C_dep_density_mA_cm2_45.0_dep_time_s_191.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 14:15": {
+        "Deposition current density [mA/cm2]": 45.0,
+        "Deposition time [s]": 191.1,
+        "Temperature_deposition [C] realized": 71.87,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0493
+        }
+    },
+    "T_test_80C_T_dep_45.1C_dep_density_mA_cm2_65.6_dep_time_s_260.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 17:40": {
+        "Deposition current density [mA/cm2]": 65.6,
+        "Deposition time [s]": 260.5,
+        "Temperature_deposition [C] realized": 45.15,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3398
+        }
+    },
+    "T_test_80C_T_dep_68.8C_dep_density_mA_cm2_37.8_dep_time_s_189.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 20:04": {
+        "Deposition current density [mA/cm2]": 37.8,
+        "Deposition time [s]": 189.0,
+        "Temperature_deposition [C] realized": 70.18,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.011
+        }
+    },
+    "T_test_80C_T_dep_56.8C_dep_density_mA_cm2_75.9_dep_time_s_132.8_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_16.12.2024 at 22:26": {
+        "Deposition current density [mA/cm2]": 75.9,
+        "Deposition time [s]": 132.8,
+        "Temperature_deposition [C] realized": 57.48,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.1122
+        }
+    },
+    "T_test_80C_T_dep_75.1C_dep_density_mA_cm2_42.5_dep_time_s_173.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 00:46": {
+        "Deposition current density [mA/cm2]": 42.5,
+        "Deposition time [s]": 173.1,
+        "Temperature_deposition [C] realized": 76.26,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0369
+        }
+    },
+    "T_test_80C_T_dep_51.8C_dep_density_mA_cm2_82.7_dep_time_s_109.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 03:09": {
+        "Deposition current density [mA/cm2]": 82.7,
+        "Deposition time [s]": 109.6,
+        "Temperature_deposition [C] realized": 53.94,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.1474
+        }
+    },
+    "T_test_80C_T_dep_70.3C_dep_density_mA_cm2_39.8_dep_time_s_180.1_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 05:28": {
+        "Deposition current density [mA/cm2]": 39.8,
+        "Deposition time [s]": 180.1,
+        "Temperature_deposition [C] realized": 70.59,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0755
+        }
+    },
+    "T_test_80C_T_dep_61.7C_dep_density_mA_cm2_78.2_dep_time_s_205.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 07:49": {
+        "Deposition current density [mA/cm2]": 78.2,
+        "Deposition time [s]": 205.0,
+        "Temperature_deposition [C] realized": 62.13,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.343
+        }
+    },
+    "T_test_80C_T_dep_70.2C_dep_density_mA_cm2_47.7_dep_time_s_167.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_1_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 11:33": {
+        "Deposition current density [mA/cm2]": 47.7,
+        "Deposition time [s]": 167.4,
+        "Temperature_deposition [C] realized": 71.28,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.0343
+        }
+    },
+    "T_test_80C_T_dep_50.1C_dep_density_mA_cm2_93.4_dep_time_s_170.5_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_2_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 13:54": {
+        "Deposition current density [mA/cm2]": 93.4,
+        "Deposition time [s]": 170.5,
+        "Temperature_deposition [C] realized": 52.73,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3295
+        }
+    },
+    "T_test_80C_T_dep_45.8C_dep_density_mA_cm2_30.5_dep_time_s_209.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_3_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 16:13": {
+        "Deposition current density [mA/cm2]": 30.5,
+        "Deposition time [s]": 209.9,
+        "Temperature_deposition [C] realized": 46.86,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3833
+        }
+    },
+    "T_test_80C_T_dep_50.0C_dep_density_mA_cm2_93.6_dep_time_s_155.6_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_4_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 18:37": {
+        "Deposition current density [mA/cm2]": 93.6,
+        "Deposition time [s]": 155.6,
+        "Temperature_deposition [C] realized": 50.29,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.2661
+        }
+    },
+    "T_test_80C_T_dep_63.2C_dep_density_mA_cm2_75.2_dep_time_s_234.9_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_5_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 20:56": {
+        "Deposition current density [mA/cm2]": 75.2,
+        "Deposition time [s]": 234.9,
+        "Temperature_deposition [C] realized": 63.74,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3168
+        }
+    },
+    "T_test_80C_T_dep_46.2C_dep_density_mA_cm2_55.2_dep_time_s_261.2_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_6_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_17.12.2024 at 23:23": {
+        "Deposition current density [mA/cm2]": 55.2,
+        "Deposition time [s]": 261.2,
+        "Temperature_deposition [C] realized": 48.01,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.392
+        }
+    },
+    "T_test_80C_T_dep_58.3C_dep_density_mA_cm2_77.1_dep_time_s_225.3_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_7_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 01:54": {
+        "Deposition current density [mA/cm2]": 77.1,
+        "Deposition time [s]": 225.3,
+        "Temperature_deposition [C] realized": 58.7,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3405
+        }
+    },
+    "T_test_80C_T_dep_40.4C_dep_density_mA_cm2_32.2_dep_time_s_222.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_8_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 04:16": {
+        "Deposition current density [mA/cm2]": 32.2,
+        "Deposition time [s]": 222.4,
+        "Temperature_deposition [C] realized": 41.88,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.3735
+        }
+    },
+    "T_test_80C_T_dep_42.6C_dep_density_mA_cm2_32.9_dep_time_s_199.4_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_9_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 06:52": {
+        "Deposition current density [mA/cm2]": 32.9,
+        "Deposition time [s]": 199.4,
+        "Temperature_deposition [C] realized": 43.67,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.4
+        }
+    },
+    "T_test_80C_T_dep_61.6C_dep_density_mA_cm2_67.6_dep_time_s_213.0_roll_while_depositing_True_HCl_dipping_time_s_900_HCl_molarity_3_Retained_electrolyte_False_Protocol_testing_protocol_coated_wires_1_exp_cycle_10_KOH_batch_Batch fabricated 04.11 Pre electrolyzed 100 h 30 wt %_start_time_18.12.2024 at 09:12": {
+        "Deposition current density [mA/cm2]": 67.6,
+        "Deposition time [s]": 213.0,
+        "Temperature_deposition [C] realized": 62.12,
+        "Deposition composition mol / L": {
+            "NiSO4": 0.323
+        }
+    }
+}
