@@ -1,4 +1,4 @@
-# Catalyst via Bayesian Optimization
+# Catalyst discovery with Bayesian Optimization
 
 
 ### Installation
@@ -12,7 +12,6 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 mamba create -n boc python=3.10 -y
 mamba activate boc
 pip install pyscf numpy==1.24.4 plotly kaleido scipy scikit-learn matplotlib==3.8.4 seaborn black tqdm joblib einops pandas ipykernel botorch
-mamba install cupy=13.3
 pip install torch
 # pip install jax flax
 ```
