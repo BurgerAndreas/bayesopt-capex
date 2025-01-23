@@ -57,7 +57,7 @@ def Create_Model(
     normalized_x, normalized_y, normaliser_params = normalize_inputs(
         y_parameter_sets=y, parameter_sets=x
     )
-    
+
     # We here need a way to normalize the stability slope for the y parameter
     y_activity_normalized = 1 - (abs(y[:, 1]) - 200) / (500 - 200)
     y_stability_normalized = 1 - (abs(y[:, 0])) / (0.4)
@@ -67,7 +67,7 @@ def Create_Model(
         w_activity * y_activity_normalized + w_stability * y_stability_normalized
     )
     y_sum_normalized = torch.tensor(y_sum_normalized, dtype=torch.float32)
-    
+
     # Compute bounds
     # Insert new bounds
     bounds = torch.stack([normalized_x.min(dim=0)[0], normalized_x.max(dim=0)[0]])
@@ -78,7 +78,7 @@ def Create_Model(
             if file.endswith(".pth")
         ]
     )
-    
+
     # Train a dummy Gaussian Process model
     # before  torch.rand(normalized_x.size(0), 1)
     # y = normalized_y  # Dummy output for GP

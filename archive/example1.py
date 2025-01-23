@@ -22,7 +22,7 @@ def denormaliser(data, normaliser_params, axis=None):
 
 
 def normalize_inputs(inputs, normaliser_params=None, dtype=torch.float32):
-    """Normalize data to have mean=0 and std=1. """
+    """Normalize data to have mean=0 and std=1."""
     inputs = torch.tensor(inputs, dtype=dtype)
     # If normaliser_params is None, compute the mean and std.
     if normaliser_params is None:
@@ -32,8 +32,6 @@ def normalize_inputs(inputs, normaliser_params=None, dtype=torch.float32):
         x_mean, x_std = normaliser_params["x_mean"], normaliser_params["x_std"]
     normalized_x = (inputs - x_mean) / x_std
     return normalized_x, normaliser_params
-
-
 
 
 def create_model(
@@ -69,12 +67,11 @@ def create_model(
     # pH regulation liquid 0-1.5 ml,
     # temperature
     # concentration of NiSO4 0.8, concentration of Mo 0.8]
-    
 
     x = torch.tensor(x, dtype=torch.float32)
     normalized_x, normaliser_params_x = normalize_inputs(x)
     normalized_y, normaliser_params_y = normalize_inputs(y)
-    
+
     # TODO: ?
     # We here need a way to normalize the stability slope for the y parameter
     y_activity_normalized = 1 - (abs(y[:, 1]) - 200) / (500 - 200)
@@ -132,7 +129,6 @@ def create_model(
     # C_des_i <= C_stock_i for all i
     # where C_des_i is the desired concentration of the i-th compound
     # and C_stock_i is the stock concentration of the i-th compound
-    
 
     # Candidate selection logic
     if acquisition_fct == "GIBBON":
@@ -169,9 +165,7 @@ def create_model(
         raise ValueError(f"Unknown acquisition_fct: {acquisition_fct}")
 
     # Denormalize candidates
-    candidate, _ = denormaliser(
-        candidate_norm, normaliser_params=normaliser_params
-    )
+    candidate, _ = denormaliser(candidate_norm, normaliser_params=normaliser_params)
 
     # Convert to DataFrame for better usability
     candidate_df = pd.DataFrame(
@@ -179,7 +173,6 @@ def create_model(
     )
 
     return candidate_df
-
 
 
 if __name__ == "__main__":
@@ -202,13 +195,13 @@ if __name__ == "__main__":
     # get parameters from json
     # optimize for lower slope (more negative slope)
     # build surrogate model and show that BayesOpt converges
-    
+
     xdata = pd.read_json("input_parameters_database.json")
     ydata = pd.read_json("goal_parameters_database.json")
-    
+
     # combine the two
     data, num_compounds = clean_data(xdata, ydata)
-    x, y = df_to_torch(data, variable_names)
+    x, y = df_to_numpy(data, variable_names)
 
 
 """
