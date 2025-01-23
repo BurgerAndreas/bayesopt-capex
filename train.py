@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-from bayesopt import BayesianOptimizer
+from bayesopt_sklearn import BayesianOptimizer
 
 from data import df_to_torch, clean_data, variable_names, parameter_bounds, parameter_granularity
 
