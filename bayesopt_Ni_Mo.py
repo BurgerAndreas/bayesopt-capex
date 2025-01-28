@@ -18,6 +18,8 @@ from data import (
     individiual_to_mixture_concentrations,
 )
 
+# Set device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # TODO: remove this and replace with actual training data
 def get_toy_training_data():
@@ -58,8 +60,8 @@ def toy_objective_function(x):
     return -(x[0] ** 2 + x[1] ** 2 + x[2] ** 2 + x[3] ** 2 + x[4] ** 2 + x[5] ** 2)
 
 
-# Define the bounds for the variables (6 variables)
-bounds = torch.tensor([parameter_bounds[v] for v in variable_order], dtype=torch.double)
+# Define the bounds for the variables 
+bounds = torch.tensor([parameter_bounds[v] for v in variable_order], dtype=torch.double).to(device)
 
 # Constraint: liquid1 + liquid2 <= 1
 inequality_constraints = [
@@ -68,11 +70,11 @@ inequality_constraints = [
         torch.tensor(
             [variable_order.index("liquid1"), variable_order.index("liquid2")],
             dtype=torch.long,
-        ),
+        ).to(device),
         # coefficients of the linear combination (weighted sum)
-        torch.tensor([1.0, 1.0], dtype=torch.double),
+        -1 * torch.tensor([1.0, 1.0], dtype=torch.double).to(device),
         # smaller or equal to
-        1.0,
+        -1.0,
     )
 ]
 
@@ -84,15 +86,18 @@ def get_my_gp(_x, _y):
         train_Y=_y,
         outcome_transform=Standardize(m=1),
         input_transform=Normalize(d=6, bounds=bounds.T),
-    )
+    ).to(device)
 
 
 # Get training data
 # torch.tensor of shape (num_samples, num_variables)
 # TODO: remove this and replace with actual training data
 train_X, train_Y = get_toy_training_data()
-train_X = torch.from_numpy(train_X).double()
-train_Y = torch.from_numpy(train_Y).double()
+train_X = torch.from_numpy(train_X).double().to(device)
+train_Y = torch.from_numpy(train_Y).double().to(device)
+
+# BoTorch maximizes the objective function, so we need to negate the objective function
+train_Y = -train_Y
 
 # check if training data is within bounds
 for i in range(train_X.shape[1]):
@@ -113,9 +118,11 @@ gp = get_my_gp(train_X, train_Y)
 mll = ExactMarginalLogLikelihood(gp.likelihood, gp)
 mll = fit_gpytorch_mll(mll)
 
+experimental_values = []
+
 # Start the optimization loop with real experiments
-max_iterations = 10  # TODO: set this to whatever you want
-experiments_per_iteration = 3  # TODO: set this to whatever you want
+max_iterations = 12  # TODO: set this to whatever you want
+experiments_per_iteration = 1  # TODO: set this to whatever you want
 for iteration in range(max_iterations):
     # Define the acquisition function
     qEI = qLogExpectedImprovement(model=gp, best_f=train_Y.max())
@@ -132,17 +139,23 @@ for iteration in range(max_iterations):
 
     for new_X in new_Xs:
         # Evaluate the new point
-        new_Y = toy_objective_function(new_X).unsqueeze(-1)
+        new_Y = toy_objective_function(new_X).unsqueeze(-1).to(device)
 
         # round to nearest bucket
         for i, v in enumerate(new_X):
             possible_values = buckets[variable_order[i]]
             # only round if the bucket is not -1 (continuous variable)
             if possible_values is not None:
+                possible_values = torch.tensor(possible_values, dtype=torch.double).to(device)
                 new_X[i] = possible_values[torch.argmin(torch.abs(possible_values - v))]
 
+        posterior = gp.posterior(new_X.unsqueeze(0))
+        expected_y = posterior.mean.item()
+        uncertainty = posterior.variance.item()
+        print('-'*100)
         print(f"New suggested experiment: {new_X}")
-        # print(f'Expected value: {new_Y.item()}')
+        print(f'Expected value: {expected_y}')
+        print(f'Uncertainty: {uncertainty}')
 
         # TODO:
         # save experiment to file
@@ -152,7 +165,9 @@ for iteration in range(max_iterations):
 
         # TODO: remove this and replace with actual experiment
         new_Y = toy_objective_function(new_X).unsqueeze(-1)
-
+        experimental_values.append(new_Y.item())
+        # BoTorch maximizes the objective function, so we need to negate the objective function
+        new_Y = -new_Y
         # usually experimental parameters deviate from the intended values
         actual_X = new_X  # TODO: get actual experimental X values
 
@@ -168,5 +183,10 @@ for iteration in range(max_iterations):
     mll = fit_gpytorch_mll(mll)
 
 # Print final results
-print("Optimized Input:", train_X[train_Y.argmax()])
-print("Optimized Objective Value:", train_Y.max().item())
+best_idx = train_Y.argmax()
+print('='*100)
+print("Optimized Input:", train_X[best_idx])
+print("Optimized Objective Value:", train_Y[best_idx].item())
+print("Experimental values:", experimental_values)
+print("Objective got smaller by:", train_Y[best_idx].item() - experimental_values[0])
+print("Objective got smaller (bool):", experimental_values[0] > train_Y[best_idx].item())
