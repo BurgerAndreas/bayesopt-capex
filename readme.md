@@ -11,7 +11,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 ```bash
 mamba create -n boc python=3.10 -y
 mamba activate boc
-pip install pyscf numpy==1.24.4 plotly kaleido scipy scikit-learn matplotlib==3.8.4 seaborn black tqdm joblib einops pandas ipykernel jupyter 
+pip install pyscf numpy==1.24.4 plotly kaleido scipy scikit-learn matplotlib pyarrow seaborn black tqdm joblib einops pandas ipykernel nbformat 
 
 
 # if you are on mac first run this
