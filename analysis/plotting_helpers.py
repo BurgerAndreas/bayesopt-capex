@@ -3,13 +3,14 @@ import matplotlib.pyplot as plt
 import torch 
 import pandas as pd
 
-from gpytorch.models import SingleTaskGP
+
+import botorch
 from botorch.fit import fit_gpytorch_mll
 from botorch.optim import optimize_acqf
 from botorch.sampling import SobolQMCNormalSampler
 from gpytorch.mlls import ExactMarginalLogLikelihood
+from botorch.models import SingleTaskGP
 
-import botorch.models.transforms as botorch_transforms
 
 # most functions you could import from here, but I copied them for convinience
 # from run_ML_optimization_activity_stability_Ni_Mo_Andreas import 
@@ -188,8 +189,8 @@ def get_my_gp(_x, _y):
     return SingleTaskGP(
         train_X=_x,
         train_Y=_y,
-        outcome_transform=botorch_transforms.Standardize(m=1),
-        input_transform=botorch_transforms.Normalize(d=6, bounds=bounds.T),
+        outcome_transform=botorch.models.transforms.Standardize(m=1),
+        input_transform=botorch.models.transforms.Normalize(d=6, bounds=bounds.T),
     )
 
 def get_model_progress_over_experiments(recompute=False):
