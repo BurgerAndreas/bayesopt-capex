@@ -302,17 +302,17 @@ print(train_Y)
 # Define the bounds for the variables
 bounds = torch.tensor([parameter_bounds[v] for v in variable_order], dtype=torch.double)
 
-# Constraint is like this
-# Conc_stock_liquid_1 = 0.4 
-# Conc_stock_liquid_2 = 0.4 
-# Conc_stock_H2SO4 = 1 
-# Sum of Conc_liquid_1 / Conc_stock_liquid_1 + Conc_liquid_2 / Conc_stock_liquid_2 + Conc_H2SO4 / Conc_stock_H2SO4 < 1
-# Sum of Conc_liquid_1 / 0.4 + Conc_liquid_2 / 0.4 + Conc_H2SO4 / 1 < 1
-# Conc_liquid_1 * 2.5 + Conc_liquid_2 * 2.5 + Conc_H2SO4 * 1 < 1
-# list of tuples (indices, coefficients, rhs)
-# \sum_i (X[indices[i]] * coefficients[i]) >= rhs
-# switch between <= and >= constraints by flipping the sign of the coefficients
 inequality_constraints = [
+    # Constraint 1: more of one liquid reduces the concentration of the other liquids
+    # Conc_stock_liquid_1 = 0.4 
+    # Conc_stock_liquid_2 = 0.4 
+    # Conc_stock_H2SO4 = 1 
+    # Sum of Conc_liquid_1 / Conc_stock_liquid_1 + Conc_liquid_2 / Conc_stock_liquid_2 + Conc_H2SO4 / Conc_stock_H2SO4 < 1
+    # Sum of Conc_liquid_1 / 0.4 + Conc_liquid_2 / 0.4 + Conc_H2SO4 / 1 < 1
+    # Conc_liquid_1 * 2.5 + Conc_liquid_2 * 2.5 + Conc_H2SO4 * 1 < 1
+    # list of tuples (indices, coefficients, rhs)
+    # \sum_i (X[indices[i]] * coefficients[i]) >= rhs
+    # default is >=, so we need to flip the sign of the coefficients
     (
         # indices of the variables we want to constrain
         torch.tensor(
@@ -324,7 +324,17 @@ inequality_constraints = [
         -1 * torch.tensor([1.0/0.4, 1.0/0.4, 1.0], dtype=torch.double),
         # bigger or equal to
         -1.0,
-    )
+    ),
+    # Constraint 2: Use a minimum amount of liquid 
+    # liquid_1 + liquid_2 >= 0.05
+    (
+        torch.tensor(
+            [variable_order.index("liquid1"), variable_order.index("liquid2")],
+            dtype=torch.long,
+        ),
+        torch.tensor([1.0, 1.0], dtype=torch.double),
+        0.05,
+    ),
 ]
 
 def check_inequality(suggested_experiment):

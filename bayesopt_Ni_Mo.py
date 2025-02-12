@@ -105,7 +105,17 @@ def run_bayesopt(acquisition_function):
             -1 * torch.tensor([1.0, 1.0], dtype=torch.double).to(device),
             # smaller or equal to
             -1.0,
-        )
+        ),
+        # add another constraint 
+        # liquid1 + liquid2 >= 0.5
+        (
+            torch.tensor(
+                [variable_order.index("liquid1"), variable_order.index("liquid2")],
+                dtype=torch.long,
+            ).to(device),
+            torch.tensor([1.0, 1.0], dtype=torch.double).to(device),
+            0.5,
+        ),
     ]
     
     #########################################################################
