@@ -9,19 +9,14 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
 ```bash
+# delete the conda environment
+conda remove -n boc --all -y
 mamba create -n boc python=3.10 -y
 mamba activate boc
-pip install pyscf numpy==1.24.4 plotly kaleido scipy scikit-learn matplotlib pyarrow seaborn black tqdm joblib einops pandas ipykernel nbformat 
+# ==0.59.0 
+pip install pyscf numpy==1.24.4 numba plotly kaleido scipy scikit-learn matplotlib pyarrow umap-learn seaborn black tqdm joblib einops pandas ipykernel nbformat 
 
-
-# if you are on mac first run this
-conda install pytorch torchvision -c pytorch
-
-# if you are on windows or linux
 pip install torch
-
-# install ax after torch, so it is linked against MKL for 10x speedup
-pip install ax-platform==0.4.3
 ```
 
 ### Run the bayesian optimization
