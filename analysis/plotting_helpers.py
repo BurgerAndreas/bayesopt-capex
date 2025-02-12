@@ -249,5 +249,7 @@ def get_model_progress_over_experiments(recompute=False):
         
         data.to_parquet(data_with_predictions_filename)
         print(f"Saved to {data_with_predictions_filename}")
+        
+    return data
     
 plotfolder = "plots"
