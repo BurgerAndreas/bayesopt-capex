@@ -29,6 +29,6 @@ python train.py
 
 ```bash
 mamba activate boc
-python analysis/dashboard.py
+python analysis/dashboard_beliefs.py
 # http://127.0.0.1:8050
 ```

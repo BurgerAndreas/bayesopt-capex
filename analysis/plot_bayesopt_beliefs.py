@@ -1,8 +1,9 @@
-
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+
+import os
 
 import plotly.graph_objects as go
 import plotly.express as px
@@ -24,9 +25,11 @@ import umap
 
 from plotting_helpers import *
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+plotfolder = os.path.join(current_dir, "plots")
 
 # load data
-data = pd.read_csv("data.csv", delimiter=";")
+data = pd.read_csv("analysis/data.csv", delimiter=";")
 
 # rename the columns
 data = data.rename(columns=variable_names)
@@ -37,10 +40,6 @@ xcols = [_c for _c in data.columns if _c != ycol]
 # reorder the columns based on variable_order
 data = data[variable_order + [ycol, "experiment"]]
 
-print(variable_order)
-# data.iloc[:3][xcols]
-# get_iloc_ordered(data, 3)
-# data
 
 ############################################################################
 # # What does the model believe are the best parameters?
@@ -64,8 +63,9 @@ best_ydatatensor = torch.tensor(best_data[ycol].values, dtype=torch.double).unsq
 ############################################################################
 # Plot predicted mean (value) and uncertainty over variable
 ############################################################################
-# plot predicted mean and uncertainty interval of temp 
+# plot predicted mean and uncertainty interval of one variable 
 # while fixing the other variables at the best values
+print('-'*80)
 for var in variable_order:
     var_idx = variable_order.index(var)
     temps = torch.linspace(bounds[var_idx, 0], bounds[var_idx, 1], 100)
@@ -90,13 +90,16 @@ for var in variable_order:
         showlegend=True,
         margin=dict(l=0, r=0, t=30, b=0),  # Remove whitespace around plot
     )
-    fig.write_image(f"{plotfolder}/stability_slope_vs_{var}.png")
-    fig.show()
+    fname = f"{plotfolder}/stability_slope_vs_{var}.png"
+    fig.write_image(fname)
+    print(f"Saved {fname}")
+    # fig.show()
 
 
 
 # # plot predicted mean and uncertainty interval of temp while fixing the other variables at the best values
 # # same plot as above, but with uncertainty as shaded region
+# print('-'*80)
 # for var in variable_order:
 #     var_idx = variable_order.index(var)
 #     temps = torch.linspace(bounds[var_idx, 0], bounds[var_idx, 1], 100)
@@ -147,8 +150,9 @@ for var in variable_order:
 ############################################################################
 
 
-# # plot a heatmap of T vs Mo, while fixing the other variables at the best values
+# # plot a heatmap of two variables, while fixing the other variables at the best values
 # # color by the predicted stability slope
+# print('-'*80)
 # params_to_plot = [
 #     ["temperature", "liquid2"],
 #     ["temperature", "liquid1"],
@@ -186,8 +190,9 @@ for var in variable_order:
     
 
 
-# plot a heatmap of T vs Mo, while fixing the other variables at the best values
-# color by the predicted stability slope
+# plot a heatmap of two variables, while fixing the other variables at the best values
+# color by the predicted stability slope and uncertainty beside it
+print('-'*80)
 params_to_plot = [
     ["temperature", "liquid2"],
     ["temperature", "liquid1"],
@@ -214,13 +219,23 @@ for params in params_to_plot:
     
     # Add mean heatmap
     fig.add_trace(
-        go.Heatmap(z=means, colorscale='Viridis', showscale=True),
+        go.Heatmap(
+            z=means, 
+            colorscale='Viridis', 
+            showscale=True,
+            colorbar=dict(x=0.46, len=0.9)
+        ),
         row=1, col=1
     )
     
     # Add uncertainty heatmap 
     fig.add_trace(
-        go.Heatmap(z=uncertainties, colorscale='Viridis', showscale=True),
+        go.Heatmap(
+            z=uncertainties, 
+            colorscale='Viridis', 
+            showscale=True,
+            colorbar=dict(x=1.0, len=0.9)
+        ),
         row=1, col=2
     )
 
@@ -235,11 +250,14 @@ for params in params_to_plot:
     fig.update_yaxes(title_text=human_names[params[0]], row=1, col=2)
     
     # fig.show()
-    fig.write_image(f"{plotfolder}/stability_slope_heatmap_uncertainty_{params[0]}_{params[1]}.png")
+    fname = f"{plotfolder}/stability_slope_heatmap_uncertainty_sidebyside_{params[0]}_{params[1]}.png"
+    fig.write_image(fname)
+    print(f"Saved {fname}")
 
 
-# plot a heatmap of T vs Mo, while fixing the other variables at the best values
-# color by the predicted stability slope
+# plot a scatter/heatmap of two variables, while fixing the other variables at the best values
+# color by the predicted stability slope, size by uncertainty
+print('-'*80)
 params_to_plot = [
     ["temperature", "liquid2"],
     ["temperature", "liquid1"],
@@ -266,15 +284,20 @@ for params in params_to_plot:
     
     # xy grid
     xgrid, ygrid = np.meshgrid(xvals, yvals)
-    
     # make a scatterplot with color as the predicted stability slope
     # and size as the uncertainty
     fig = px.scatter(
-        x=xgrid.flatten(),
-        y=ygrid.flatten(),
-        color=certainties.flatten(),
-        size=uncertainties.flatten(),
-        hover_data=["experiment"],
+        data_frame=pd.DataFrame({
+            'x': xgrid.flatten(),
+            'y': ygrid.flatten(),
+            'stability_slope': means.flatten(),
+            'uncertainty': uncertainties.flatten()
+        }),
+        x='x',
+        y='y',
+        color='stability_slope',
+        size='uncertainty',
+        size_max=10  # Reduce default size by 0.5
     )
     fig.update_layout(
         title=f'Predicted Stability Slope vs {params[0]} and {params[1]}',
@@ -282,6 +305,8 @@ for params in params_to_plot:
         yaxis_title=human_names[params[0]],
     )
     # fig.show()
-    fig.write_image(f"{plotfolder}/stability_slope_heatmap_uncertainty_{params[0]}_{params[1]}.png")
+    fname = f"{plotfolder}/stability_slope_heatmap_uncertainty_scatter_{params[0]}_{params[1]}.png"
+    fig.write_image(fname)
+    print(f"Saved {fname}")
 
 
