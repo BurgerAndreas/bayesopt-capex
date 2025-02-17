@@ -14,7 +14,7 @@ conda remove -n boc --all -y
 mamba create -n boc python=3.10 -y
 mamba activate boc
 # ==0.59.0 
-pip install pyscf numpy==1.24.4 numba plotly kaleido scipy scikit-learn matplotlib pyarrow umap-learn seaborn black tqdm joblib einops pandas ipykernel nbformat 
+pip install numpy==1.24.4 numba plotly dash table kaleido scipy scikit-learn matplotlib pyarrow umap-learn seaborn black tqdm joblib einops pandas ipykernel nbformat 
 
 pip install torch
 ```
@@ -25,3 +25,10 @@ mamba activate boc
 python train.py
 ```
 
+### Plotting
+
+```bash
+mamba activate boc
+python analysis/dashboard.py
+# http://127.0.0.1:8050
+```
