@@ -3,13 +3,14 @@ Dashboard for Visualizing Model Predictions
 
 This dashboard loads the CSV data, computes the final GP model (best state),
 and lets you:
-  - In Section 1, select a variable to sweep via a dropdown and adjust the other
-    variable values via sliders. The predicted mean (with ±1σ uncertainty) is shown
-    in a line plot positioned to the right of the sliders.
-  - In Section 2, select two variables for a heatmap via dropdowns and adjust the
-    remaining variable values via sliders (displayed on the left); the right side shows
-    two heatmaps (stacked vertically): one with the predicted stability slope and one
-    with its uncertainty.
+- In Section 1, select a variable to sweep via a dropdown and adjust the other
+variable values via sliders. The predicted mean (with ±1σ uncertainty) is shown
+in a line plot positioned to the right of the sliders.
+- In Section 2, select two variables for a heatmap via dropdowns and adjust the
+remaining variable values via sliders (displayed on the left); the right side shows
+two heatmaps (stacked vertically): one with the predicted stability slope and one
+with its uncertainty.
+- In Section 3, we plot good regions using dimensional reduction techniques (work in progress)
   
 Make sure that your helper functions and globals are available by importing them
 from your "plotting_helpers" module.
@@ -44,7 +45,7 @@ from plotting_helpers import (
 # ------------------------ Data and Model Setup ------------------------------
 
 # Load CSV data (change the path if necessary)
-data = pd.read_csv("analysis/data.csv", delimiter=";")
+data = pd.read_csv("analysis/data4.csv", delimiter=";")
 data = data.rename(columns=variable_names)
 ycol = "stability_slope"
 # Reorder columns according to variable_order (plus y and 'experiment' if available)
