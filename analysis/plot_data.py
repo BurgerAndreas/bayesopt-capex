@@ -36,7 +36,7 @@ from plotting_helpers import *
 var_names_short = {
     "Avg slope": "Y",
     "current_density": "I",
-    "deposition_time": "t",
+    "deposition_time": "S",
     "temperature": "T",
     "liquid1": "Liq1",
     "liquid2": "Liq2",
@@ -265,7 +265,7 @@ for embedding, method in zip([embedding_pca, embedding_umap], ["PCA", "UMAP"]):
                     text=center_text,
                     showarrow=True,
                     arrowhead=1,
-                    font=dict(size=10)  # Reduce text size
+                    font=dict(size=11)  # Reduce text size
                 )
 
         fig.update_layout(
@@ -475,7 +475,7 @@ for embedding, method in zip([embedding_tsne, embedding_umap], ["t-SNE", "UMAP"]
                     text=center_text,
                     showarrow=True,
                     arrowhead=1,
-                    font=dict(size=10)  # Reduce text size
+                    font=dict(size=11)  # Reduce text size
                 )
 
         fig.update_layout(
