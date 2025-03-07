@@ -20,20 +20,13 @@ We combine performance and uncertainty information through scatter plots where c
 
 
 ### plot_data.py
-(didn't use these plots in the paper)
-We generate PCA visualization by applying principal component analysis to standardized experimental data. The two-dimensional embedding preserves linear relationships between input variables. We color points by stability slope values to identify favorable outcome regions.
-We create UMAP plots to capture both local and global non-linear structures within the standardized data. This technique provides a complementary view to PCA by preserving topological relationships. We visualize the two-dimensional UMAP embedding as a scatter plot with points colored by stability slope values, revealing clusters not apparent in linear PCA projection.
-
-(didn't use these plots in the paper)
-To visualize high-performing conditions in two dimensions, we employ t-SNE and UMAP. t-SNE highlights the local structure of promising configurations while maintaining separation between distinct parameter regions. UMAP provides a complementary view by preserving topological relationships.
-
-(used!)
 Next we identify promising experimental conditions. We select the top 20% of data points, in terms of stability slope, from our experiments for analysis. We perform standardization using z-score normalization, with liquid variables standardized together using their common statistics.
-We identify natural groupings of optimal regions by applying DBSCAN to the standardized, high-performing points. To characterize each cluster, we calculate each cluster's centroid in the original parameter space and the associated standard deviation.
+We identify natural groupings of optimal regions by applying HDBSCAN to the standardized, high-performing points. To characterize each cluster, we calculate each cluster's centroid in the original parameter space and the associated standard deviation.
 
-(didn't use these plots in the paper)
-To visualize the clusters, we apply both UMAP and t-SNE to the DBSCAN results.
-
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) identifies clusters by grouping points that exist in dense regions of the feature space. Unlike centroid-based methods like k-means, DBSCAN can be used for irregular cluster shapes and unknown number of natural groupings.
+DBSCAN defines clusters as continuous regions of high point density separated by regions of low density, automatically identifying noise points that don't belong to any cluster. 
+HDBSCAN extends DBSCAN by constructing a hierarchy of potential clusters at varying density levels, then extracting the most stable clusters across this hierarchy, allowing for clusters of varying densities.
+"""
 
 ### plot_model_learning_progress.py
 We evaluate model prediction error through a scatter plot correlating experiment number with absolute prediction error. We generate this visualization by retrieving model predictions at each optimization stage, reconstructing the Gaussian Process model's state after each iteration. We create an interactive scatter visualization with points colored by stability slope values. The horizontal axis represents chronological experiment ordering while the vertical axis quantifies prediction error magnitude, with declining trends indicating improved learning.

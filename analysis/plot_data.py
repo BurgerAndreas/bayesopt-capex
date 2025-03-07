@@ -33,14 +33,25 @@ warnings.filterwarnings("ignore")
 
 from plotting_helpers import *
 
+var_names_short = {
+    "Avg slope": "Y",
+    "current_density": "I",
+    "deposition_time": "t",
+    "temperature": "T",
+    "liquid1": "Liq1",
+    "liquid2": "Liq2",
+    "H2SO4": "H2SO4",
+}
 
-
+# fix random seed
+np.random.seed(42)
 
 ##################################################################
 # Load data
 ##################################################################
 current_dir = os.path.dirname(os.path.abspath(__file__))
-plotfolder = os.path.join(current_dir, "plots")
+plotfolder = os.path.join(current_dir, "plots/dataplots")
+os.makedirs(plotfolder, exist_ok=True)
 
 # load data
 data = pd.read_csv(os.path.join(current_dir, "data4.csv"), delimiter=";")
@@ -57,6 +68,11 @@ data = data[variable_order + [ycol, "experiment"]]
 ##################################################################
 # Just the data: PCA
 ##################################################################
+"""
+(didn't use these plots in the paper)
+We generate PCA visualization by applying principal component analysis to standardized experimental data. The two-dimensional embedding preserves linear relationships between input variables. We color points by stability slope values to identify favorable outcome regions.
+We create UMAP plots to capture both local and global non-linear structures within the standardized data. This technique provides a complementary view to PCA by preserving topological relationships. We visualize the two-dimensional UMAP embedding as a scatter plot with points colored by stability slope values, revealing clusters not apparent in linear PCA projection.
+"""
 print("")
 print(f"-"*80)
 # Standardization (z-score) zero mean, unit variance
@@ -94,10 +110,10 @@ for i, col in enumerate(variable_order):
 # so there might not be clusters that align perfectly with cost variations.
 
 pca = PCA(n_components=2)
-embedding = pca.fit_transform(data_standardized)
+embedding_pca = pca.fit_transform(data_standardized)
 
 # plot the embedding
-fig = px.scatter(embedding, x=0, y=1, color=data["stability_slope"], title="PCA of data")
+fig = px.scatter(embedding_pca, x=0, y=1, color=data["stability_slope"], title="PCA of data")
 fig.update_layout(
     xaxis_title="PCA 1",
     yaxis_title="PCA 2",
@@ -133,27 +149,134 @@ print(f"Variance of each component: {pca.explained_variance_}")
 # print(f"Cumulative variance ratio of each component: {pca.explained_variance_ratio_.cumsum()}")
 
 
-##################################################################
+# -----------------------------
 # Just the data: UMAP
-##################################################################
 # # UMAP preserves local and global structure approximately
 # # allows for non-linear relationships
 
 myupmap = umap.UMAP(n_components=2, random_state=42)
-embedding = myupmap.fit_transform(data_standardized) 
+embedding_umap = myupmap.fit_transform(data_standardized) 
 
 # plot the embedding
-fig = px.scatter(embedding, x=0, y=1, color=data["stability_slope"], title="UMAP of data")
+fig = px.scatter(embedding_umap, x=0, y=1, color=data["stability_slope"], title="UMAP of data")
 fig.update_layout(
     xaxis_title="UMAP 1",
     yaxis_title="UMAP 2",
     showlegend=True,
     margin=dict(l=0, r=0, t=30, b=0)  # Remove whitespace around plot
 )
-fig.write_image(f"{plotfolder}/umap.png")
-print("\nSaved umap.png")
+figname = f"{plotfolder}/umap.png"
+fig.write_image(figname)
+print(f"Saved {figname}")
 # fig.show()
 plt.close()
+
+# -----------------------------
+# Cluster the embeddings
+for embedding, method in zip([embedding_pca, embedding_umap], ["PCA", "UMAP"]):
+    # Apply DBSCAN clustering with iterative parameter relaxation
+    print(f"\nApplying DBSCAN clustering on {method} embedding...")
+    # Start with strict parameters
+    eps_values = [0.5, 1.0, 1.5, 2.0, 3.0]
+    min_samples_values = [5, 4, 3, 2]
+
+    # Iterate through parameters until clusters are found
+    clusters = None
+    for eps in eps_values:
+        for min_samples in min_samples_values:
+            dbscan = DBSCAN(eps=eps, min_samples=min_samples)
+            clusters = dbscan.fit_predict(embedding)
+            n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
+            print(f"DBSCAN with eps={eps}, min_samples={min_samples}: Found {n_clusters} clusters")
+            
+            # If we found clusters, break out of the loop
+            if n_clusters > 0:
+                print(f"Using parameters: eps={eps}, min_samples={min_samples}")
+                break
+        if n_clusters > 0:
+            break
+
+    # If no clusters were found with any parameters, try HDBSCAN as a fallback
+    if n_clusters == 0:
+        print("No clusters found with DBSCAN, trying HDBSCAN...")
+        # Try HDBSCAN with progressively relaxed parameters
+        hdbscan_params = [
+            {"min_cluster_size": 5, "min_samples": 3},
+            {"min_cluster_size": 4, "min_samples": 2},
+            {"min_cluster_size": 3, "min_samples": 2},
+            {"min_cluster_size": 2, "min_samples": 1}
+        ]
+        
+        for params in hdbscan_params:
+            print(f"Trying HDBSCAN with parameters: {params}")
+            hdb = hdbscan.HDBSCAN(**params)
+            clusters = hdb.fit_predict(embedding)
+            n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
+            print(f"HDBSCAN found {n_clusters} clusters")
+            
+            if n_clusters > 0:
+                print(f"Using HDBSCAN parameters: {params}")
+                break
+                
+        # If still no clusters found, use most relaxed parameters
+        if n_clusters == 0:
+            print("No clusters found with any parameters, using most relaxed settings")
+            hdb = hdbscan.HDBSCAN(min_cluster_size=2, min_samples=1, cluster_selection_epsilon=0.5)
+            clusters = hdb.fit_predict(embedding)
+            n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
+            print(f"HDBSCAN with relaxed parameters found {n_clusters} clusters")
+
+    for with_stats in [True, False]:
+        # Plot
+        fig = px.scatter(
+            x=embedding[:, 0],
+            y=embedding[:, 1],
+            color=clusters,
+            title=f"Clusters of {method} embeddings of Good Regions",
+            labels={'color': 'Cluster'},
+        )
+
+        # Add cluster centers and statistics
+        if with_stats:
+            for cluster_id in set(clusters):
+                if cluster_id == -1:  # Skip noise points
+                    continue
+                
+                mask = clusters == cluster_id
+                cluster_points = data[mask]
+                
+                # Calculate cluster center in original space
+                center = cluster_points[variable_order].mean()
+                avg_slope = cluster_points['stability_slope'].mean()
+                
+                # Add annotation with cluster info
+                # center_text = f"Cluster {cluster_id}:<br>"
+                center_text = f""
+                center_text += f"Y: {int(avg_slope)}<br>"
+                for var, val in center.items():
+                    center_text += f"{var_names_short[var]}: {val:.2f} +- {cluster_points[var].std():.2f}<br>"
+                
+                # Find centroid in embedding space
+                centroid = embedding[mask].mean(axis=0)
+                
+                fig.add_annotation(
+                    x=centroid[0],
+                    y=centroid[1],
+                    text=center_text,
+                    showarrow=True,
+                    arrowhead=1,
+                    font=dict(size=10)  # Reduce text size
+                )
+
+        fig.update_layout(
+            showlegend=True,
+            margin=dict(l=0, r=0, t=30, b=0)
+        )
+        figname = f"{plotfolder}/{method}_clusters{'_stats' if with_stats else ''}.png"
+        fig.write_image(figname)
+        print(f"Saved {figname}")
+        # fig.show()
+        plt.close()
 
 
 ##################################################################
@@ -168,6 +291,13 @@ plt.close()
 # - optionally do kmeans clustering and plot the clusters
 # - label the clusters with their unnormalized center
 
+"""
+Next we identify promising experimental conditions. We select the top 20% of data points, in terms of stability slope, from our experiments for analysis. We perform standardization using z-score normalization, with liquid variables standardized together using their common statistics.
+We generate PCA visualization by applying principal component analysis to standardized experimental data. The two-dimensional embedding preserves linear relationships between input variables. We color points by stability slope values to identify favorable outcome regions.
+We create UMAP plots to capture both local and global non-linear structures within the standardized data. This technique provides a complementary view to PCA by preserving topological relationships. We visualize the two-dimensional UMAP embedding as a scatter plot with points colored by stability slope values, revealing clusters not apparent in linear PCA projection.
+
+We identify natural groupings of optimal regions by applying DBSCAN to the standardized, high-performing points. To characterize each cluster, we calculate each cluster's centroid in the original parameter space and the associated standard deviation.
+"""
 
 print("")
 print(f"-"*80)
@@ -197,14 +327,15 @@ print(f"This selects {(data['stability_slope'] <= threshold).sum()} points "
 good_data = data[data['stability_slope'] <= threshold].copy()
 good_data_std = data_standardized[data['stability_slope'] <= threshold]
 
+# --------------------------
 # Apply t-SNE
 tsne = TSNE(n_components=2, random_state=42, perplexity=5)
-embedding = tsne.fit_transform(good_data_std)
+embedding_tsne = tsne.fit_transform(good_data_std)
 
 # Plot the embedding colored by stability slope
 fig = px.scatter(
-    x=embedding[:, 0], 
-    y=embedding[:, 1],
+    x=embedding_tsne[:, 0], 
+    y=embedding_tsne[:, 1],
     color=good_data['stability_slope'],
     title="t-SNE of Good Regions",
     labels={'color': 'Stability Slope'},
@@ -216,78 +347,154 @@ fig.update_layout(
     showlegend=True,
     margin=dict(l=0, r=0, t=30, b=0)
 )
-fig.write_image(f"{plotfolder}/tsne_good_regions.png")
+figname = f"{plotfolder}/goodregions_tsne.png"
+fig.write_image(figname)
+print(f"Saved {figname}")
 # fig.show()
 plt.close()
 
-# Apply DBSCAN clustering
-print("\nApplying DBSCAN clustering on t-SNE embedding...")
-dbscan = DBSCAN(eps=0.5, min_samples=5)
-clusters = dbscan.fit_predict(embedding)
-n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
-print(f"Found {n_clusters} clusters")
+# --------------------------
+# Apply UMAP
+myumap = umap.UMAP(n_components=2, random_state=42)
+embedding_umap = myumap.fit_transform(good_data_std)
 
-# Plot with cluster labels
+# Plot the embedding colored by stability slope
 fig = px.scatter(
-    x=embedding[:, 0],
-    y=embedding[:, 1],
-    color=clusters,
-    title="t-SNE Clusters of Good Regions",
-    labels={'color': 'Cluster'},
+    x=embedding_umap[:, 0],
+    y=embedding_umap[:, 1],
+    color=good_data['stability_slope'],
+    title="UMAP of Good Regions",
+    labels={'color': 'Stability Slope'},
+    color_continuous_scale='viridis_r'
 )
-
-# Add cluster centers and statistics
-for cluster_id in set(clusters):
-    if cluster_id == -1:  # Skip noise points
-        continue
-    
-    mask = clusters == cluster_id
-    cluster_points = good_data[mask]
-    
-    # Calculate cluster center in original space
-    center = cluster_points[variable_order].mean()
-    avg_slope = cluster_points['stability_slope'].mean()
-    
-    # Add annotation with cluster info
-    center_text = f"Cluster {cluster_id}:<br>"
-    center_text += f"Avg slope: {avg_slope:.3f}<br>"
-    for var, val in center.items():
-        center_text += f"{var}: {val:.2f}<br>"
-    
-    # Find centroid in embedding space
-    centroid = embedding[mask].mean(axis=0)
-    
-    fig.add_annotation(
-        x=centroid[0],
-        y=centroid[1],
-        text=center_text,
-        showarrow=True,
-        arrowhead=1
-    )
-
 fig.update_layout(
+    xaxis_title="UMAP 1",
+    yaxis_title="UMAP 2",
     showlegend=True,
     margin=dict(l=0, r=0, t=30, b=0)
 )
-fig.write_image(f"{plotfolder}/tsne_clusters.png")
-print("Saved tsne_clusters.png")
+figname = f"{plotfolder}/goodregions_umap.png"
+fig.write_image(figname)
+print(f"Saved {figname}")
 # fig.show()
 plt.close()
 
+
 ##################################################################
-# Plot good regions (better)
+# DBSCAN clustering of embeddings
+
+for embedding, method in zip([embedding_tsne, embedding_umap], ["t-SNE", "UMAP"]):
+    # Apply DBSCAN clustering with iterative parameter relaxation
+    print(f"\nApplying DBSCAN clustering on {method} embedding...")
+    # Start with strict parameters
+    eps_values = [0.5, 1.0, 1.5, 2.0, 3.0]
+    min_samples_values = [5, 4, 3, 2]
+
+    # Iterate through parameters until clusters are found
+    clusters = None
+    for eps in eps_values:
+        for min_samples in min_samples_values:
+            dbscan = DBSCAN(eps=eps, min_samples=min_samples)
+            clusters = dbscan.fit_predict(embedding)
+            n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
+            print(f"DBSCAN with eps={eps}, min_samples={min_samples}: Found {n_clusters} clusters")
+            
+            # If we found clusters, break out of the loop
+            if n_clusters > 0:
+                print(f"Using parameters: eps={eps}, min_samples={min_samples}")
+                break
+        if n_clusters > 0:
+            break
+
+    # If no clusters were found with any parameters, try HDBSCAN as a fallback
+    if n_clusters == 0:
+        print("No clusters found with DBSCAN, trying HDBSCAN...")
+        # Try HDBSCAN with progressively relaxed parameters
+        hdbscan_params = [
+            {"min_cluster_size": 5, "min_samples": 3},
+            {"min_cluster_size": 4, "min_samples": 2},
+            {"min_cluster_size": 3, "min_samples": 2},
+            {"min_cluster_size": 2, "min_samples": 1}
+        ]
+        
+        for params in hdbscan_params:
+            print(f"Trying HDBSCAN with parameters: {params}")
+            hdb = hdbscan.HDBSCAN(**params)
+            clusters = hdb.fit_predict(embedding)
+            n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
+            print(f"HDBSCAN found {n_clusters} clusters")
+            
+            if n_clusters > 0:
+                print(f"Using HDBSCAN parameters: {params}")
+                break
+                
+        # If still no clusters found, use most relaxed parameters
+        if n_clusters == 0:
+            print("No clusters found with any parameters, using most relaxed settings")
+            hdb = hdbscan.HDBSCAN(min_cluster_size=2, min_samples=1, cluster_selection_epsilon=0.5)
+            clusters = hdb.fit_predict(embedding)
+            n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
+            print(f"HDBSCAN with relaxed parameters found {n_clusters} clusters")
+
+    for with_stats in [True, False]:
+        # Plot
+        fig = px.scatter(
+            x=embedding[:, 0],
+            y=embedding[:, 1],
+            color=clusters,
+            title=f"Clusters of {method} embeddings of Good Regions",
+            labels={'color': 'Cluster'},
+        )
+
+        # Add cluster centers and statistics
+        if with_stats:
+            for cluster_id in set(clusters):
+                if cluster_id == -1:  # Skip noise points
+                    continue
+                
+                mask = clusters == cluster_id
+                cluster_points = good_data[mask]
+                
+                # Calculate cluster center in original space
+                center = cluster_points[variable_order].mean()
+                avg_slope = cluster_points['stability_slope'].mean()
+                
+                # Add annotation with cluster info
+                # center_text = f"Cluster {cluster_id}:<br>"
+                center_text = f""
+                center_text += f"Avg slope: {avg_slope:.3f}<br>"
+                for var, val in center.items():
+                    center_text += f"{var_names_short[var]}: {val:.2f}<br>"
+                
+                # Find centroid in embedding space
+                centroid = embedding[mask].mean(axis=0)
+                
+                fig.add_annotation(
+                    x=centroid[0],
+                    y=centroid[1],
+                    text=center_text,
+                    showarrow=True,
+                    arrowhead=1,
+                    font=dict(size=10)  # Reduce text size
+                )
+
+        fig.update_layout(
+            showlegend=True,
+            margin=dict(l=0, r=0, t=30, b=0)
+        )
+        figname = f"{plotfolder}/goodregions_{method}_clusters{'_stats' if with_stats else ''}.png"
+        fig.write_image(figname)
+        print(f"Saved {figname}")
+        # fig.show()
+        plt.close()
+
+##################################################################
+# Clustering good regions (better)
 ##################################################################
 # Strategy 2: clustering + dimensionality reduction
-# - Find natural threshold using elbow/knee method to select good regions
+# - Select good regions based on threshold
 # - Normalize the data (keeping liquid1 and liquid2 on the same scale)
 # - Apply HDBSCAN clustering on normalized data to find natural clusters
-# - Apply UMAP to visualize the clusters in 2D
-# - Print cluster statistics and centers in original space
-# - Create interactive plot with:
-#     - Points colored by cluster
-#     - Hover text showing point details
-#     - Annotations showing cluster centers and stats
-#     - Side-by-side comparison with t-SNE visualization
 
 print("")
 print(f"-"*80)
@@ -295,133 +502,55 @@ print(f"-"*80)
 good_data = data[data['stability_slope'] <= threshold].copy()
 good_data_std = data_standardized[data['stability_slope'] <= threshold]
 
-# Apply HDBSCAN clustering on standardized data
-print("\nApplying HDBSCAN clustering...")
-clusterer = hdbscan.HDBSCAN(min_cluster_size=5, min_samples=3)
-clusters = clusterer.fit_predict(good_data_std)
-n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
-print(f"Found {n_clusters} natural clusters")
-if n_clusters == 0:
-    # try again with looser requirements
-    print("Trying again")
-    clusterer = hdbscan.HDBSCAN(min_cluster_size=3, min_samples=3)
-    clusters = clusterer.fit_predict(good_data_std)
-    n_clusters = len(set(clusters)) - (1 if -1 in clusters else 0)
-    print(f"Found {n_clusters} natural clusters")
+# Apply HDBSCAN clustering on standardized data with progressively relaxed parameters
+print("\nApplying HDBSCAN clustering with multiple parameter sets...")
 
-# Print detailed cluster statistics
-print("Detailed cluster statistics:")
-for cluster_id in sorted(set(clusters)):
-    if cluster_id == -1:
-        continue
-        
-    mask = clusters == cluster_id
-    cluster_points = good_data[mask]
+"""
+DBSCAN (Density-Based Spatial Clustering of Applications with Noise) identifies clusters by grouping points that exist in dense regions of the feature space. Unlike centroid-based methods like k-means, DBSCAN defines clusters as continuous regions of high point density separated by regions of low density. The algorithm requires two parameters: epsilon (ε), which defines the neighborhood radius around each point, and minPts, which specifies the minimum number of points required within that radius to form a core point. DBSCAN automatically identifies noise points that don't belong to any cluster and can discover arbitrarily shaped clusters without requiring the number of clusters to be specified in advance. This makes it particularly valuable for datasets with irregular cluster shapes and when the number of natural groupings is unknown.
+HDBSCAN extends DBSCAN by constructing a hierarchy of potential clusters at varying density levels, then extracting the most stable clusters across this hierarchy. This approach eliminates the need for a fixed epsilon parameter, allowing the algorithm to identify clusters of varying densities within the same dataset while maintaining DBSCAN's ability to discover arbitrarily shaped clusters.
+"""
+
+# Define a sequence of increasingly relaxed clustering parameters
+clustering_params = [
+    {"min_cluster_size": 5, "min_samples": 3},
+    {"min_cluster_size": 4, "min_samples": 3},
+    {"min_cluster_size": 3, "min_samples": 3},
+    {"min_cluster_size": 3, "min_samples": 2},
+    {"min_cluster_size": 2, "min_samples": 2}
+]
+
+# Try clustering with progressively relaxed parameters until we find clusters
+clusters = None
+n_clusters = 0
+used_params = None
+
+for params in clustering_params:
+    print(f"\nTrying HDBSCAN with parameters: {params}")
+    clusterer = hdbscan.HDBSCAN(**params)
+    current_clusters = clusterer.fit_predict(good_data_std)
+    current_n_clusters = len(set(current_clusters)) - (1 if -1 in current_clusters else 0)
+    print(f"Found {current_n_clusters} natural clusters")
     
-    print(f"\nCluster {cluster_id}:")
-    print(f"Number of points: {mask.sum()}")
-    print(f"Average stability slope: {cluster_points['stability_slope'].mean():.3f} "
-          f"± {cluster_points['stability_slope'].std():.3f}")
-    print("Center point (mean of all variables):")
-    for var in variable_order:
-        print(f"  {var}: {cluster_points[var].mean():.2f} ± {cluster_points[var].std():.2f}")
-
-
-
-# Apply UMAP to high-dim clustering for visualization
-myumap = umap.UMAP(n_components=2, random_state=42)
-umap_embedding = myumap.fit_transform(good_data_std)
-
-# Create side-by-side plots using subplots
-fig = make_subplots(rows=1, cols=2, 
-                    subplot_titles=("UMAP Visualization", "t-SNE Visualization"))
-
-# Add UMAP scatter plot
-fig.add_trace(
-    go.Scatter(
-        x=umap_embedding[:, 0],
-        y=umap_embedding[:, 1],
-        mode='markers',
-        marker=dict(
-            color=clusters,
-            colorscale='Viridis',
-            showscale=True,
-            colorbar=dict(title="Cluster")
-        ),
-        text=[f"Cluster: {c}<br>" + 
-              f"Stability Slope: {s:.3f}<br>" + 
-              "<br>".join([f"{var}: {val:.2f}" for var, val in row.items()]) 
-              for c, s, row in zip(clusters, good_data['stability_slope'], 
-                                 good_data[variable_order].to_dict('records'))],
-        hoverinfo='text',
-        name='UMAP'
-    ),
-    row=1, col=1
-)
-
-# Add t-SNE scatter plot (reuse embedding from before)
-fig.add_trace(
-    go.Scatter(
-        x=embedding[:, 0],
-        y=embedding[:, 1],
-        mode='markers',
-        marker=dict(
-            color=clusters,
-            colorscale='Viridis',
-            showscale=False
-        ),
-        text=[f"Cluster: {c}<br>" + 
-              f"Stability Slope: {s:.3f}<br>" + 
-              "<br>".join([f"{var}: {val:.2f}" for var, val in row.items()]) 
-              for c, s, row in zip(clusters, good_data['stability_slope'], 
-                                 good_data[variable_order].to_dict('records'))],
-        hoverinfo='text',
-        name='t-SNE'
-    ),
-    row=1, col=2
-)
-
-# Add cluster statistics and centers as annotations
-# for cluster_id in set(clusters):
-#     if cluster_id == -1:  # Skip noise points
-#         continue
-        
-#     mask = clusters == cluster_id
-#     cluster_points = good_data[mask]
+    if current_n_clusters > 0:
+        # save the first (most stringent) set of clusters
+        if clusters is None:
+            clusters = current_clusters
+            n_clusters = current_n_clusters
+            used_params = params
     
-#     # Calculate cluster statistics
-#     center = cluster_points[variable_order].mean()
-#     avg_slope = cluster_points['stability_slope'].mean()
-#     std_slope = cluster_points['stability_slope'].std()
-    
-#     # Create annotation text
-#     center_text = f"Cluster {cluster_id}:<br>"
-#     center_text += f"Points: {mask.sum()}<br>"
-#     center_text += f"Avg slope: {avg_slope:.3f} ± {std_slope:.3f}<br>"
-#     for var, val in center.items():
-#         center_text += f"{var}: {val:.2f}<br>"
-    
-#     # Add annotations to both plots
-#     for col, embedding_data in enumerate([umap_embedding, embedding], 1):
-#         centroid = embedding_data[mask].mean(axis=0)
-#         fig.add_annotation(
-#             x=centroid[0],
-#             y=centroid[1],
-#             text=center_text,
-#             showarrow=True,
-#             arrowhead=1,
-#             row=1, col=col
-#         )
-
-fig.update_layout(
-    height=600,
-    width=1200,
-    showlegend=False,
-    title_text="Comparison of UMAP and t-SNE Clustering Visualizations"
-)
-
-fig.write_image(f"{plotfolder}/clustering_comparison.png")
-print("\nSaved clustering_comparison.png")
-# fig.show()
-plt.close()
-
+        # Print detailed cluster statistics
+        print("Cluster statistics:")
+        for cluster_id in sorted(set(current_clusters)):
+            if cluster_id == -1:
+                continue
+                
+            mask = current_clusters == cluster_id
+            cluster_points = good_data[mask]
+            
+            print(f"Cluster {cluster_id}:")
+            print(f" Number of points: {mask.sum()}")
+            print(f" Average stability slope: {cluster_points['stability_slope'].mean():.1f} "
+                f"± {cluster_points['stability_slope'].std():.3f}")
+            print(" Center point (mean of all variables):")
+            for var in variable_order:
+                print(f"  {var}: {cluster_points[var].mean():.3f} ± {cluster_points[var].std():.3f}")
