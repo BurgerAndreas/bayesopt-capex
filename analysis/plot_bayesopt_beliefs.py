@@ -21,8 +21,6 @@ from botorch.utils.sampling import draw_sobol_samples
 import sklearn
 import umap
 
-
-
 from plotting_helpers import *
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -51,7 +49,7 @@ data = data[variable_order + [ycol, "experiment"]]
 # final state of the model
 xdatatensor = get_torch_from_df(data, variable_order)
 ydatatensor = torch.tensor(data[ycol].values, dtype=torch.double).unsqueeze(-1)
-best_gp = get_my_gp(xdatatensor, ydatatensor)
+final_gp = get_my_gp(xdatatensor, ydatatensor)
 
 
 # pick parameters at best y value, lowest is best
@@ -75,7 +73,7 @@ for var in variable_order:
     for _t in temps:
         _input = best_xdata_tensor[0].clone()
         _input[var_idx] = _t
-        posterior = best_gp.posterior(_input.unsqueeze(0))
+        posterior = final_gp.posterior(_input.unsqueeze(0))
         means.append(posterior.mean.item())
         uncertainties.append(posterior.variance.sqrt().item())
     fig = px.line(
@@ -109,7 +107,7 @@ for var in variable_order:
 #     for _t in temps:
 #         _input = best_xdata_tensor[0].clone()
 #         _input[var_idx] = _t
-#         posterior = best_gp.posterior(_input.unsqueeze(0))
+#         posterior = final_gp.posterior(_input.unsqueeze(0))
 #         means.append(posterior.mean.item())
 #         uncertainties.append(posterior.variance.sqrt().item())
 
@@ -170,7 +168,7 @@ for var in variable_order:
 #             _input = best_xdata_tensor[0].clone()
 #             _input[variable_order.index(params[0])] = _y
 #             _input[variable_order.index(params[1])] = _x
-#             posterior = best_gp.posterior(_input.unsqueeze(0))
+#             posterior = final_gp.posterior(_input.unsqueeze(0))
 #             means[i, j] = posterior.mean.item()
 #             uncertainties[i, j] = posterior.variance.sqrt().item()
             
@@ -210,7 +208,7 @@ for params in params_to_plot:
             _input = best_xdata_tensor[0].clone()
             _input[variable_order.index(params[0])] = _y
             _input[variable_order.index(params[1])] = _x
-            posterior = best_gp.posterior(_input.unsqueeze(0))
+            posterior = final_gp.posterior(_input.unsqueeze(0))
             means[i, j] = posterior.mean.item()
             uncertainties[i, j] = posterior.variance.sqrt().item()
             
@@ -275,7 +273,7 @@ for params in params_to_plot:
             _input = best_xdata_tensor[0].clone()
             _input[variable_order.index(params[0])] = _y
             _input[variable_order.index(params[1])] = _x
-            posterior = best_gp.posterior(_input.unsqueeze(0))
+            posterior = final_gp.posterior(_input.unsqueeze(0))
             means[i, j] = posterior.mean.item()
             uncertainties[i, j] = posterior.variance.sqrt().item()
     
@@ -308,5 +306,13 @@ for params in params_to_plot:
     fname = f"{plotfolder}/stability_slope_heatmap_uncertainty_scatter_{params[0]}_{params[1]}.png"
     fig.write_image(fname)
     print(f"Saved {fname}")
+
+
+
+
+
+
+
+
 
 
